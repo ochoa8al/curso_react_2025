@@ -5,38 +5,72 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}.field-group {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: space-between;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input{
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  padding: 0.2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input:hover {
+  box-shadow: 0 0 8px #3841e7;
 }
 
-.card {
-  padding: 2em;
+button[type="submit"]{
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
-.read-the-docs {
-  color: #888;
+button[type="submit"]:hover {
+  background-color: darkblue;
+}
+
+.form-container {
+  background: #2c2b2b;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  width: 350px; /* ancho inicial */
+  transition: width 0.5s ease-in-out; /* animación del ancho */
+}
+
+.form-container.expandido {
+  width: 400px; /* ancho cuando se expande */
+}
+
+
+input {   
+  flex: 1;  
+}
+
+.title{
+  color: yellow;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+/*ultimo elemento del box debe ser mas grande o tener mas with que el primero del box*/
+.box:last-child {
+  flex-grow: 5;
 }
