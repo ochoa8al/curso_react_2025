@@ -34,8 +34,6 @@ export const Table = () => {
         </tr>
       </thead>
       <tbody>
-
-        {console.log("Data en Table:", data)}
         {        
         data && data?.map((user,index) => (
           <tr key={user._id}>
@@ -47,7 +45,7 @@ export const Table = () => {
             <td>{user.username}</td>
             <td>
               <button id="openDialog" onClick={() =>handleEditUser(user)}>
-                <Link to={`/detalle/${user._id}`}>Editar</Link>
+                <Link to={`/detalle/${user._id}`} state={user} >Editar</Link>
               </button>
             </td>
             <td>

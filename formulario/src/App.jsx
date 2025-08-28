@@ -53,14 +53,15 @@ function App() {
   return (
     
     <>
+    <UserContextProvider >
     <Router>
-       <UserContextProvider >
+       
       <Routes>       
           <Route path="/" element={<Home />} />
           <Route path="/detalle/:id" element={<Detalle />} />        
       </Routes>    
-      </UserContextProvider>   
     </Router>
+    </UserContextProvider>   
     </>
   )
 }
